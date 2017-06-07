@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+    <script>
+    function arrMethod(arr){
+       for(var i=0;i<arr.length;i++){
+       	for(var j=0;j<arr.length-i;j++){
+       		toCompare(j,j+1);
+       	}
+       }
+       function toCompare(prev,next){
+       	var tmp=0;
+       	 if(arr[prev]>arr[next]){
+           tmp=arr[prev];
+           arr[prev]=arr[next];
+           arr[next]=tmp;
+       	 }
+       }
+       return arr;
+    }	
+    alert(arrMethod([5,9,4,3,6,2]))
+    </script>
+	
+</body>
+</html>

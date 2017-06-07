@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>数组去重(json对象)</title>
+</head>
+<body>
+	<script>
+	function arrMethod(arr){
+		var arrNew=[];
+    	var obj={};   	
+    	for(var i=0;i<arr.length;i++){
+    		if(!obj[arr[i]]){
+             arrNew.push(arr[i]);
+             obj[arr[i]]=arr[i];
+    		}         
+    	   }     
+    	return arrNew;
+    }	
+    alert(arrMethod([5,9,4,3,6,2,3,9,4,5,6,3]))
+ </script>   
+</body>
+</html>
